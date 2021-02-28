@@ -1,0 +1,18 @@
+
+.active-slide {
+  color: $base-color;
+  img {
+    border-bottom: 3px solid $base-color;
+  }
+}
+
+.fake-arrow {
+  font-size: 2rem;
+  cursor: pointer;
+  &.fake-arrow-prev {
+    left: -10px;
+  }
+  &.fake-arrow-next {
+    right: -10px;
+  }
+}

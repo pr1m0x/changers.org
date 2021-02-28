@@ -1,0 +1,12 @@
+extends layout 
+block content
+  .abc.flex.flex-col.justify-center.min-h-screen
+    .col-sm-6
+      .text-center.text-sm-right.mr-sm-4.mb-5.mb-sm-0
+        img.w-60.w-sm-100.mx-auto(src='/images/svg/think.svg' alt='Image Description' style='max-width: 15rem;')
+    .flex.flex-col.items-center.gap-4
+      - var status = status || 404;
+      <h2 class="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl"><span class="block">#{status}</span></h2>
+      <span class="text-xl block text-gray-900"> #{message}</span>
+
+      <a href="/" class="w-30 focus:outline-none px-3 py-3 rounded-lg text-sm font-medium text-center text-gray-600 bg-white hover:bg-gray-100 border">Zurück zur Startseite</a>

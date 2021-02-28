@@ -1,0 +1,12 @@
+.profile-tab-item  {
+  cursor: pointer;
+  
+  &:hover {
+    color: $base-color;
+  }
+  
+  &.active-tab {
+    border-bottom: 4px solid $base-color;
+    color: $base-color;
+    }
+}

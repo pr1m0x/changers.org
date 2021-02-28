@@ -1,0 +1,257 @@
+extends ../layout 
+
+include ../mixins/cardMixins
+
+block content
+
+  .bg-white(style="")
+    .hero-banner.max-w-6xl.mx-auto.py-12.px-4.text-center(class='justify-center flex-col gap-6 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center bg-local h-full bg-cover bg-center bg-no-repeat' style="padding: 100px 30px; background-image: url('/images/background/bg.gif')")
+      h2.text-5xl.font-extrabold.tracking-tight.text-gray-900(class='sm:text-6xl')
+        span.block Starten Sie Ihre Kampagne!
+      span.text-xl.block.text-gray-900 433.236.607 Menschen in Aktion. Viele Erfolge täglich.
+      .inline-flex.rounded-md.shadow
+          a.inline-flex.items-center.justify-center.px-5.py-3.border.border-transparent.text-base.font-medium.rounded-md.text-white.bg-indigo-600(href='/start' class='hover:bg-indigo-700')
+            | Petition starten
+  
+              
+  //- SLIDER
+  .main-slider.max-w-5xl.mx-auto.px-4(class='sm:px-6 lg:pb-3 lg:px-8 lg:flex lg:items-center lg:justify-between relative')
+    //- FAKE ARROWS
+    .fake-arrow.fake-arrow-prev.absolute.text-gray-300 &#10094;
+    .fake-arrow.fake-arrow-next.absolute.text-gray-300 &#10095;
+    
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide.grid.grid-cols-12.rounded.border-grey-light.border-solid.border.overflow-hidden
+          .left.col-span-12(class="md:col-span-6")
+            img(src="/images/sample/heilung.jpg")
+          .right.col-span-12(class="md:col-span-6").p-5.flex-col.flex
+            .text-black.font-bold.text-2xl.mb-2 
+              a(href="#" class="hover:underline") Erfolg! Konversionsverbot für Minderjährige verboten!
+            p.text-grey-darker.flex-1.text-sm.leading-5 Vor weniger als 2 Jahren haben wir zusammen angefangen dafür zu kämpfen, dass sogenannte Konversionsbehandlungen in Deutschland endlich der Vergangenheit angehören. 2 Jahre harter…  
+              a.text-indigo-600.underline(href="#") Mehr lesen
+            .slider-footer.flex.justify-between.space-x-6.border.border-l-0.border.border-r-0.border.border-b-0.border-grey-light
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Username
+                p.text-xs Berlin
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | 21.932
+                p.text-xs Unterstützer*innen
+              .flex-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Medien
+                p.text-xs www.abc.de
+
+        .swiper-slide.grid.grid-cols-12.rounded.border-grey-light.border-solid.border.overflow-hidden
+          .left.col-span-12(class="md:col-span-6")
+            img(src="/images/sample/zaki.png")
+          .right.col-span-12(class="md:col-span-6").p-5.flex-col.flex
+            .text-black.font-bold.text-2xl.mb-2 
+              a(href="#" class="hover:underline") Erfolg! Zali ist zurück!
+            p.text-grey-darker.flex-1.text-sm.leading-5 Ich kann es immer noch nicht glauben, seit 3 Tagen bin ich wieder in Deutschland. Ohne eure Hilfe und eure Spenden wäre meine Rückkehr nicht möglich gewesen. Ihr habt mir das Leben gerettet.  
+              a.text-indigo-600.underline(href="#") Mehr lesen
+            .slider-footer.flex.justify-between.space-x-6.border.border-l-0.border.border-r-0.border.border-b-0.border-grey-light
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Username
+                p.text-xs Berlin
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | 21.932
+                p.text-xs Unterstützer*innen
+              .flex-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Medien
+                p.text-xs www.abc.de
+          
+        .swiper-slide.grid.grid-cols-12.rounded.border-grey-light.border-solid.border.overflow-hidden
+          .left.col-span-12(class="md:col-span-6")
+            img(src="/images/sample/ichwill.png")
+          .right.col-span-12(class="md:col-span-6").p-5.flex-col.flex
+            .text-black.font-bold.text-2xl.mb-2 
+              a(href="#" class="hover:underline") Es ist vom Bundeskabinett beschlossen, Frauenquote kommt!
+            p.text-grey-darker.flex-1.text-sm.leading-5 Nach der ersten Einigung im November hat das Bundeskabinett am Mittwoch nun beschlossen: wenn Vorstände großer und börsennotierter Unternehmen mehr...  
+              a.text-indigo-600.underline(href="#") Mehr lesen
+            .slider-footer.flex.justify-between.space-x-6.border.border-l-0.border.border-r-0.border.border-b-0.border-grey-light
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Username
+                p.text-xs Berlin
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | 21.932
+                p.text-xs Unterstützer*innen
+              .flex-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Medien
+                p.text-xs www.abc.de
+          
+        .swiper-slide.grid.grid-cols-12.rounded.border-grey-light.border-solid.border.overflow-hidden
+          .left.col-span-12(class="md:col-span-6")
+            img(src="/images/sample/delfin.png")
+          .right.col-span-12(class="md:col-span-6").p-5.flex-col.flex
+            .text-black.font-bold.text-2xl.mb-2 
+              a(href="#" class="hover:underline") Das Ende des "Wal-Gefängnisses"!
+            p.text-grey-darker.flex-1.text-sm.leading-5 Nach fast einem Jahr gemeinsamer Aktionen, hartnäckiger Arbeit und einer aktiven Kampagne, freue ich mich, nun endlich über diesen Erfolg zu berichten! Ich bedanke mich bei Ihnen allen von ganzem Herzen für die tolle Unterstützung auf dem Weg dahin! Sie alle haben zu...  
+              a.text-indigo-600.underline(href="#") Mehr lesen
+            .slider-footer.flex.justify-between.space-x-6.border.border-l-0.border.border-r-0.border.border-b-0.border-grey-light
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Username
+                p.text-xs Berlin
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | 21.932
+                p.text-xs Unterstützer*innen
+              .flex-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Medien
+                p.text-xs www.abc.de  
+
+        .swiper-slide.grid.grid-cols-12.rounded.border-grey-light.border-solid.border.overflow-hidden
+          .left.col-span-12(class="md:col-span-6")
+            img(src="/images/sample/platzangst.png")
+          .right.col-span-12(class="md:col-span-6").p-5.flex-col.flex
+            .text-black.font-bold.text-2xl.mb-2 
+              a(href="#" class="hover:underline") Wir haben Platzangst
+            p.text-grey-darker.flex-1.text-sm.leading-5 In dem Studienfach Psychologie gibt es seit der Bologna-Reform zu wenig Masterplätze für die Absolvent:innen des Bachelor-Studiums. So können jährlich mehr als 600 Studierende kein konsekutives Masterstudium aufnehmen. Bachelor-Psycholog:innen haben jedoch nur geringe bis gar keine Möglichkeiten des beruflichen Einstiegs und befinden sich deshalb in einem beruflichen Niemandsland. Ein Master ist in der Psychologie nahezu immer die Grundvoraussetzung potenzieller Stellen...  
+              a.text-indigo-600.underline(href="#") Mehr lesen
+            .slider-footer.flex.justify-between.space-x-6.border.border-l-0.border.border-r-0.border.border-b-0.border-grey-light
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Username
+                p.text-xs Berlin
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | 21.932
+                p.text-xs Unterstützer*innen
+              .flex-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Medien
+                p.text-xs www.abc.de      
+
+        .swiper-slide.grid.grid-cols-12.rounded.border-grey-light.border-solid.border.overflow-hidden
+          .left.col-span-12(class="md:col-span-6")
+            img(src="/images/sample/nationalsozialismus.png")
+          .right.col-span-12(class="md:col-span-6").p-5.flex-col.flex
+            .text-black.font-bold.text-2xl.mb-2 
+              a(href="#" class="hover:underline") Anerkennung vergessener Opfer des Nationalsozialismus
+            p.text-grey-darker.flex-1.text-sm.leading-5 75 Jahre lang gab es ein gesellschaftliches Schweigen über zwei Opfergruppen des Nationalsozialismus, der sogenannten ‘Asozialen’ und ‘Berufsverbrechern’. Jetzt endlich können und werden die bisher ignorierten...  
+              a.text-indigo-600.underline(href="#") Mehr lesen
+            .slider-footer.flex.justify-between.space-x-6.border.border-l-0.border.border-r-0.border.border-b-0.border-grey-light
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Username
+                p.text-xs Berlin
+              .flex-1.border-r-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | 21.932
+                p.text-xs Unterstützer*innen
+              .flex-1.border-grey-light.mt-5
+                p.text-xs.flex.items-center.mb-1
+                  svg.text-grey.w-.h-3.mr-1(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20' fill="#4f46e4")
+                    path(d='M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z')
+                  | Medien
+                p.text-xs www.abc.de     
+  
+        //- include ./components/slide.pug
+        //- include ./components/slide.pug
+        //- include ./components/slide.pug
+        //- include ./components/slide.pug
+        //- include ./components/slide.pug
+        //- include ./components/slide.pug
+        
+      .swiper-button-prev.invisible
+      .swiper-button-next.invisible
+
+      
+  .sub-slider.max-w-5xl.mx-auto.py-12.px-4(class='sm:px-6 lg:pb-6 lg:pt-3 lg:px-8')
+    .related-posts(class="flex justify-between gap-6")
+      .related-box.cursor-pointer(class="w-full" data-slide-id="1").active-slide
+        img.rounded(src="/images/sample/heilung.jpg")
+        p(class="text-grey-darker text-xs mt-1") Erfolg! Konversionsverbot für Minderjährige verboten!
+      .related-box.cursor-pointer(class="w-full" data-slide-id="2")
+        img.rounded(src="/images/sample/Zaki.png")
+        p(class="text-grey-darker text-xs mt-1") Erfolg! Zali ist zurück!
+      .related-box.cursor-pointer(class="w-full" data-slide-id="3")
+        img.rounded(src="/images/sample/ichwill.png")
+        p(class="text-grey-darker text-xs mt-1") Die Frauenquote kommt
+      .related-box.cursor-pointer(class="w-full" data-slide-id="4")
+        img.rounded(src="/images/sample/delfin.png")
+        p(class="text-grey-darker text-xs mt-1") Das Ende des "Wal-Gefängnisses"!
+      .related-box.cursor-pointer(class="w-full" data-slide-id="5")
+        img.rounded(src="/images/sample/platzangst.png")
+        p(class="text-grey-darker text-xs mt-1") Mehr Masterplätze für Studierende
+      .related-box.cursor-pointer(class="w-full" data-slide-id="6")
+        img.rounded(src="/images/sample/nationalsozialismus.png")
+        p(class="text-grey-darker text-xs mt-1") Anerkennung vergessener Opfer des Nationalsozialismus
+        
+        
+  .max-w-5xl.mx-auto.py-12.px-4(class='sm:px-6 lg:py-16 lg:px-8')
+    .grid.grid-cols-12(class="md:gap-12")
+      .col-span-12(class="md:col-span-9")
+        h2.text-2xl.font-bold.tracking-tight.text-gray-900(class='sm:text-2xl mb-5')
+          span.block Was gerade auf Change.org passiert
+        
+        .upcoming-events.flex.flex-col.gap-4
+          each val in events
+            +cardHome2(val)
+        
+      .col-span-12(class="md:col-span-3")
+        h4.font-bold.tracking-tight.text-gray-900(class='sm:text-1xl mb-5')
+          span.block THEMEN
+        .flex.flex-wrap
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Menschenrechte
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Politk
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Umwelt
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Europa
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Behindertenrechte
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Gentrifizierung
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Bildung
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Lobbyismus
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Frauenrechte
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Gesundheit
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Rente
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Tiere
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Familie
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Verbraucherschutz
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Sport
+          a(href="/search?q=dobby" class="event-tag mb-2 mr-1 px-4 py-1 text-sm text-indigo-600 font-semibold rounded-full border border-indigo-600 hover:text-white hover:bg-indigo-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2") Kultur
+block scripts
+  <script src="/main.js"></script>

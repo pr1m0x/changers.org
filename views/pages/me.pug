@@ -1,0 +1,25 @@
+extends ../layout
+include ../mixins/cardMixins
+
+block content
+  .min-h-screen.bg-gray-50
+    .max-w-5xl.mx-auto.py-12.px-4(class='flex flex-col items-center')
+      h2.profile-username(class='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl') #{user.username}
+      p.profile-location(class="flex mb-2 mt-4 max-w-2xl text-xl text-gray-500 items-center")
+        svg(class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true")
+          path(fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd")
+        | #{user.country}
+      a(href=`/profile` class="mt-6 bg-indigo-600 text-white px-3 py-2 rounded-md text-sm font-medium") Profile bearbeiten
+
+    .max-w-2xl.mx-auto.py-12.px-4
+      .profile-tab.flex.gap-4
+        p.profile-tab-item(class="text-lg text-gray-500")= `(${user.eventsCreated.length}) gestartet`  
+        //- p.profile-tab-item(class="text-lg text-gray-500") (1) unterschrieben      
+      
+      hr.mb-8
+      .flex.flex-col.gap-6
+        each val in user.eventsCreated
+          +cardPreview(val, user.username)
+          
+block scripts     
+  <script src="/main.js"></script>

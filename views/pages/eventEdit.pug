@@ -1,0 +1,147 @@
+extends ../layout 
+block content
+  form
+    .bg-gray-100
+      .max-w-4xl.mx-auto.py-4.px-4(class='flex gap-4 justify-end')
+        <a href="/me" class="focus:outline-none px-3 py-2 rounded-lg text-sm font-medium text-center text-gray-600 bg-white hover:bg-gray-100 border">Abbrechen</a>
+        <button type="submit" class="btn-submit focus:outline-none border border-transparent px-3 py-2 rounded-lg text-center text-white bg-indigo-600 hover:bg-indigo-700 text-sm font-medium">Speichern</button>
+    .bg-white.mb-12.mt-10
+      .max-w-2xl.mx-auto.flex.gap-6(class="flex-col")
+        .user-info.flex.gap-3.items-center.text-sm.self-center
+          span(class="min-w-min inline-block h-8 w-8 rounded-full overflow-hidden bg-gray-100")
+            svg(class="h-8 w-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24")
+              path(d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z")
+          p.text-gray-800 <strong>#{event.creator.username}</strong>
+          p.text-gray-500 #{event.creator.country}
+        
+        <div class="bg-white border p-4 px-2 flex w-full rounded h-14">
+          input(required autocomplete="off" name="title" class="w-full rounded p-2 outline-none text-xl placeholder-gray-300 text-gray-500" type="text" placeholder="Was wollen sie erreichen?" value=event.title)
+        </div>      
+        <div>
+          input(name="tags" class="tag0x__dropdown w-full h-16 text-lg text-gray-500 placeholder-gray-300 focus:shadow-outline" type="text" placeholder="Suchbegriffe eingeben" data-picked-tags=`${event.tags}` data-tag-items=`["black lives matter","bildung","klimawandel","gesundheit","frieden","gleichheit","recht","nachhaltigkeit","politik","soziales","kinder","heirat","klimaschutz","klima","polizei","polizeigewalt","gay","homo","hetero","ehe","geschlecht","arbeit","arbeitslosigkeit","ungleichheit","links","gegen-rechts","sport","krise","bank","islam","christentum","israel","amerika","religion","libanon","gesetz","lesbisch","schwul","trans","umwelt"]`)
+        </div>
+        
+      
+        #my-dropzone.dropzone.fallback(action="/")(class="overflow-hidden relative rounded-lg p-5 border-2 border-dashed border-gray-200 text-gray-500 hover:bg-gray-100" style="display: flex; justify-content: center; flex-direction: column; min-height:350px")                                             
+          //- <div class="absolute top-0 right-0 z-10">X DELETE</div>
+          //- img(class="rounded-lg absolute z-0" src=event.banner)
+          <div class="dz_error_message error_animation" style="display:block !important">
+          <div class="errorBox">
+              img(class="placeholder-img w-full absolute" src=event.banner alt="Image Description")
+              <div class="errText">
+                  <h4 class="mb-1">Entschuldigung. Message.</h4>
+                  <p class="text-secondary text-sm font-weight-light d-block mt-2">Bitte stelle sicher, dass dein Titelbild den unten aufgeführten Angaben entspricht.
+              </p></div>
+          </div>
+          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary dz__err__close bg-indigo-600 hover:bg-indigo-700" data-dismiss="modal" aria-label="Close">
+              <i class="tio-clear tio-lg" aria-hidden="true"></i>
+          </button>
+          </div>
+          
+          .dz-default.dz-message.needsclick.text-muted.text-center(style="max-width: 85%")
+            <svg class="mx-auto h-16 w-16 text-gray-400 mb-4" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="text-sm mb-2"><span class="text-indigo-600 font-bold">Bild hochladen</span> oder hereinziehen</p>
+
+            <p class="text-sm">⚠️ Bitte verwende ein <b>rechteckiges Titelbild</b> in den Formaten <b>*.jpg</b>, <b>*.jpeg</b> oder <b>*.png</b>. Die maximale Größe des Uploads beträgt <b>2 MB</b>.</small>
+
+        <div class="mb-5">
+          #editor-container(data-delta=event.description)
+        </div>
+        
+        
+        <div class="inline-block w-full border align-bottom bg-white rounded-lg text-left overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                <!-- Heroicon name: outline/exclamation -->
+                <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline"> Petition löschen </h3>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">
+                    Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <a class="btn-delete cursor-pointer w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">Löschen</a>
+            //- <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
+          </div>
+    </div>
+
+
+  
+
+block scripts   
+  <script src="/vendor/dropzone/dropzone.min.js"></script>  
+  <script src="/vendor/quill/quill.min.js"></script>  
+
+  script.
+    //- Dropzone.autoDiscover = false;
+
+    //- new Dropzone('#my-dropzone', {
+    //-   autoProcessQueue: false,
+    //-   maxFiles: 1,
+    //-   acceptedFiles: 'image/jpeg,image/jpg,image/png',
+    //-   maxFilesize: 2,
+    //-   dictFileTooBig: 'Dein Titelbild ist zu groß',
+    //-   dictInvalidFileType: 'Dieses Format unterstützen wir nicht',
+    //-   dictRemoveFile: '<span class="btn btn-sm btn-white">Titelbild entfernen</span>',
+    //-   thumbnailWidth: 500,
+    //-   thumbnailHeight: 250,
+    //-   addRemoveLinks: true,
+    //-   uploadMultiple: false,
+    //-   parallelUploads: 1,
+    //-   maxFiles: 1,
+    //-   maxfilesexceeded: function (file) {
+    //-     this.removeAllFiles();
+    //-     this.addFile(file);
+    //-   },
+    //-   init: function () {
+    //-     this.on('addedfile', function (file) {
+    //-       document.querySelector('.dz-message').style.display = 'none';
+    //-     }),
+    //-       this.on('removedfile', function (file) {
+    //-         document.querySelector('.dz-message').style.display = 'block';
+    //-       });
+    //-   },
+    //-   error: function (file, err) {
+    //-     this.removeFile(file);
+    //-     if (err === 'You can not upload any more files.') return;
+    //-     const dropzoneContainer = document.getElementById('my-dropzone');
+    //-     const errMsg = document.createElement('DIV');
+    //-     errMsg.classList.add('dz_error_message');
+    //-     errMsg.innerHTML = `
+    //-     <div class="errorBox">
+    //-       <img class="avatar avatar-xl img-fluid mb-3" src="/assets/svg/illustrations/sorry_fill.svg" alt="Image Description">
+    //-       <div class="errText">
+    //-         <h4 class="mb-1">Entschuldigung. ${err}.</h4>
+    //-         <p class="text-secondary text-sm font-weight-light d-block mt-2">Bitte stelle sicher, dass dein Titelbild den unten aufgeführten Angaben entspricht.</small>
+    //-       </div>
+    //-     </div>
+    //-     <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary dz__err__close" data-dismiss="modal" aria-label="Close">
+    //-       <i class="tio-clear tio-lg" aria-hidden="true"></i>
+    //-     </button>
+    //-     `;
+    //-     dropzoneContainer.appendChild(errMsg);
+
+    //-     setTimeout(() => {
+    //-       document.querySelector('.dz-message').classList.add('blurr0x');
+
+    //-       document.querySelector('.dz_error_message').classList.add('error_animation');
+    //-     }, 100);
+
+    //-     document.querySelector('.dz__err__close').addEventListener('click', () => {
+    //-       document.querySelector('.dz-message').classList.remove('blurr0x');
+    //-       document.querySelector('.dz_error_message').remove();
+    //-     });
+    //-   },
+    //-   });
+  <script src="/main.js"></script>

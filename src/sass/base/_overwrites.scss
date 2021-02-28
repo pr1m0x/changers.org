@@ -1,0 +1,71 @@
+/*
+* Colors
+* Margins
+* Borders
+*/
+
+
+// Colors
+// .text-indigo-600 {
+//   color: $base-color;
+// }
+// .border-indigo-600 {
+//   border-color: $base-color;
+// }
+// .bg-indigo-600 {
+//   background-color: $base-color;
+// }
+
+// Experimental
+
+// .bg-indigo-600:hover {
+//   background-color: $base-color !important;
+// }
+
+// .hover:bg-indigo-600:hover {
+//   background-color: $base-color !important;
+// }
+
+// .hover .bg-xxx-600:hover {
+//   background-color: $base-color !important;
+// }
+// .hover.bg-xxx-600:hover {
+//   background-color: $base-color !important;
+// }
+
+// .hover\:bg-xxx-600 {
+//   background-color: $base-color !important;
+// }
+// .hover:bg-xxx-600:hover {
+//   background-color: $base-color !important;
+// }
+
+// .hover:bg-xxx-600 {
+//   background-color: $base-color !important;
+// }
+// .hover\:bg-xxx-600 {
+//   background-color: $base-color !important;
+// }
+
+
+// .hover\:bg-indigo-600:hover {
+//   background-color: $base-color !important;
+// }
+
+// * Colors
+.border-t-1 {
+  border-top-width: 1px;
+}
+.border-r-1 {
+  border-right-width: 1px;
+}
+.border-b-1 {
+  border-bottom-width: 1px;
+}
+.border-l-1 {
+  border-left-width: 1px;
+}
+
+.h-vh-80 {
+  height: 80vh !important;
+}

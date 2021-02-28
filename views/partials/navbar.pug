@@ -1,0 +1,50 @@
+nav.bg-gray-800
+  .max-w-7xl.mx-auto.px-2(class='sm:px-6 lg:px-8')
+    .relative.flex.items-center.justify-between.h-16
+      #mobile-sandwich.absolute.inset-y-0.left-0.flex.items-center(class='sm:hidden')
+        button.inline-flex.items-center.justify-center.p-2.rounded-md.text-gray-400(class='hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white' aria-expanded='false')
+          span.sr-only Open main menu
+      
+          svg.block.h-6.w-6(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24' stroke='currentColor' aria-hidden='true')
+            path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16')
+
+          svg.hidden.h-6.w-6(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24' stroke='currentColor' aria-hidden='true')
+            path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
+      .flex-1.flex.items-center.justify-center(class='sm:items-stretch sm:justify-start')
+        a(href="/")
+          .text-2xl.font-extrabold.tracking-tight.text-gray-300 change.org
+          //- img.block.h-8.w-auto(class='lg:hidden' src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg' alt='Workflow')
+          //- img.hidden.h-8.w-auto(class='lg:block' src='https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg' alt='Workflow')
+        .hidden(class='sm:block sm:ml-6')
+          .flex.space-x-4
+            //- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
+            //- a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium(href='#') Eine Petition starten
+            a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='/start' class='hover:bg-gray-700 hover:text-white') Eine Petition starten
+            a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='/me' class='hover:bg-gray-700 hover:text-white') Meine Petitionen
+            a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='/search' class='hover:bg-gray-700 hover:text-white') Durchsuchen
+      .absolute.inset-y-0.right-0.flex.items-center.pr-2(class='sm:static sm:inset-auto sm:ml-6 sm:pr-0')
+        button.bg-gray-800.p-1.rounded-full.text-gray-400(class='hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white')
+          span.sr-only View notifications
+          a(href="/search")
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-gray-400 group-focus-within:text-gray-500 transition-colors duration-150"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        
+        if (isLoggedIn)
+          #user-menu.ml-3.relative
+            div
+              button#user-menu.bg-gray-800.flex.text-sm.rounded-full(class='focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white' aria-haspopup='true')
+                span.sr-only Open user menu
+                <span class="min-w-min inline-block h-8 w-8 rounded-full overflow-hidden bg-gray-100"><svg class="h-8 w-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></span>
+            #user-menu-dropwdown.origin-top-right.absolute.right-0.mt-2.w-48.rounded-md.shadow-lg.py-1.bg-white.ring-1.ring-black.ring-opacity-5(class="hidden" role='menu' aria-orientation='vertical' aria-labelledby='user-menu')
+              a.block.px-4.py-2.text-sm.text-gray-700(href='/me' class='hover:bg-gray-100' role='menuitem') Meine Petitionen
+              a.block.px-4.py-2.text-sm.text-gray-700(href='/profile' class='hover:bg-gray-100' role='menuitem') Profil bearbeiten
+              a.block.px-4.py-2.text-sm.text-red-500(href='/signout' class='hover:bg-gray-100' role='menuitem') Abmelden
+        else
+          a(href="/login" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700") Anmelden
+              
+        
+    #small-device-menu.hidden(class='sm:hidden')
+      .px-2.pt-2.pb-3.space-y-1
+        // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
+        a.bg-gray-900.text-white.block.px-3.py-2.rounded-md.text-base.font-medium(href='#') Eine Petition starten
+        a.text-gray-300.block.px-3.py-2.rounded-md.text-base.font-medium(href='#' class='hover:bg-gray-700 hover:text-white') Meine Petitionen
+        a.text-gray-300.block.px-3.py-2.rounded-md.text-base.font-medium(href='#' class='hover:bg-gray-700 hover:text-white') Durchsuchen

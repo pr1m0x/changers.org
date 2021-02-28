@@ -1,0 +1,138 @@
+extends ../layout 
+
+include ../mixins/formMixins
+
+block content
+  - const topicsArr = [{topic: "Tiere", icon: "pet"}, {topic: "Umwelt", icon: "leaf"}, { topic: "Politik", icon: "company"}, {topic: "Wirtschaft", icon: "insurance"}, {topic: "Gesundheit", icon: "heart-outlined"}, {topic: "Immigranten", icon: "group-equal"}, {topic: "Frauenrechte", icon: "face-female"}, {topic: "Lokal", icon: "poi-user"}];
+
+  <div class="multistep-form min-h-screen" x-data="" x-cloak>
+      <div class="max-w-2xl mx-auto px-4 py-10">
+        <div x-show.transition="step === 'complete'">
+          <div class="bg-white rounded-lg p-12 mt-12 flex items-center justify-between">
+            <div class="flex flex-col items-center">
+              <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+
+              <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Fast fertig!</h2>
+              <div class="text-gray-600 mb-8 text-center">Sehen Sie sich Ihre Petition in der Vorschau an und prüfen Sie, dass alles gut aussieht.</div>
+
+              <a href="/me" class="flex items-center h-12 block focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border" >Meine Petitionen</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tracking-wide text-sm font-bold text-gray-500 mb-4 leading-tight text-center" x-text="`Schritt: ${step} von 5`"></div>
+        <div x-show.transition="step != 'complete'">	
+          <div class="flex items-center mb-4">
+            <div class="w-full bg-gray-100 rounded-full mr-4">
+              <div class="rounded-full bg-green-500 text-xs leading-none h-2 text-center text-white" :style="'width: '+ parseInt(step / 5 * 100) +'%'"></div>
+            </div>
+            <div class="text-xs w-10 text-gray-600" x-text="parseInt(step / 5 * 100) +'%'"></div>
+          </div>
+        
+        
+          <!-- Top Navigation -->
+          <div class="border-b-2 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+              <div class="flex-1">
+                <div x-show="step === 1">
+                  <h2 class="profile-username text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-3">Um was für ein Thema geht es in Ihrer Petition?</h2>
+                    <p class="text-grey-darker text-md leading-6">Wenn Sie ein Thema auswählen, kann Change.org Ihre Petition interessierten Unterstützer*innen vorstellen.</p>
+                  </div>
+                <div x-show="step === 2">
+                  <h2 class="profile-username text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-3">Schreiben Sie hier die Petitionsüberschrift.</h2>
+                  <p class="text-grey-darker text-md leading-6">Es ist das Erste, was Menschen von Ihrer Petition sehen werden. Machen Sie sie neugierig, indem Sie sich kurz fassen und sich auf die Veränderung konzentrieren, die Sie erreichen wollen und für die sie auf Unterstützung setzen.</p>
+                </div>
+                <div x-show="step === 3">
+                  <h2 class="profile-username text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-3">Perfekt! Wer hat die Macht, die von Ihnen gewünschte Veränderung herbeizuführen?</h2>
+                  <p class="text-grey-darker text-md leading-6">Wählen Sie die Empfänger*innen Ihrer Petition aus. Hierbei handelt es sich um Personen oder Organisationen, die in der Lage sind, Ihr Problem zu lösen oder die von Ihnen gewünschten Maßnahmen zu ergreifen. Wenn Sie mit Ihrer Petition am Themenvoting für Abstimmung21 teilnehmen wollen, dann wählen Sie als Empfänger bitte "Abstimmung21" und "Bundestag" aus!</p> </div>
+                </div>
+                <div x-show="step === 4">
+                  <h2 class="profile-username text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-3">Erzählen Sie von Ihrem Problem, das Sie lösen wollen.</h2>
+                  <p class="text-grey-darker text-md leading-6">Menschen werden Ihre Petition mit einer größeren Wahrscheinlichkeit unterstützen, wenn klar ist, warum Sie sich mit diesem Thema beschäftigen. Erklären Sie deshalb, inwiefern diese Veränderung einen Einfluss auf Sie, Ihre Familie oder Ihr soziales Umfeld haben wird.</p>
+                </div>
+                <div x-show="step === 5">
+                  <h2 class="profile-username text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-3">Foto oder Video einbinden.</h2>
+                  <p class="text-grey-darker text-md leading-6">Petitionen mit Bild oder Video erhalten sechsmal mehr Unterschriften als solche ohne. Fügen Sie ein Bild oder Video an, welches die Emotionen Ihrer Geschichte am besten beschreibt.</p>
+                </div>
+            </div>
+          </div>
+          <!-- /Top Navigation -->
+
+          <!-- Step Content -->
+          <div class="py-10">	
+            <div x-show.transition.in="step === 1">
+              <div class="flex flex-wrap justify-center gap-6">
+              
+              each val in topicsArr
+                +topicBox(val)
+
+          
+              </div>
+
+            </div>
+            <div x-show.transition.in="step === 2">
+              <div class="mb-5">
+                <label for="password" class="font-bold mb-1 text-gray-700 block"></label>
+                <div class="text-gray-600 mt-2 mb-4">
+                    <input name="title"class="w-full h-16 px-4 mb-2 text-lg text-gray-500 placeholder-gray-300 border rounded-lg focus:shadow-outline" autocomplete="off" type="text" placeholder="Was wollen Sie erreichen?">
+                </div>
+              </div>
+            </div>
+            <div x-show.transition.in="step === 3">
+              <div class="mb-5">
+                // START
+                <div id="editor-container" style="height: 250px">
+                </div>
+                <input type="text" class="hidden-input hidden">
+                p.editor-message.text-sm.mt-4 Großartig — Sie haben angefangen, an Ihrer Petition zu schreiben. Wir empfehlen, noch <span class="chars-left font-bold">1000</span> weitere Zeichen hinzuzufügen - weiter so!
+                // END
+              </div>
+            </div>
+            <div x-show.transition.in="step === 4">
+              <div class="mb-5">
+              input(name="tags" class="tag0x__dropdown w-full h-16 text-lg text-gray-500 placeholder-gray-300 focus:shadow-outline" type="text" placeholder="Suchbegriffe eingeben" data-picked-tags='[""]' data-tag-items=`["black lives matter","bildung","klimawandel","gesundheit","frieden","gleichheit","recht","nachhaltigkeit","politik","soziales","kinder","heirat","klimaschutz","klima","polizei","polizeigewalt","gay","homo","hetero","ehe","geschlecht","arbeit","arbeitslosigkeit","ungleichheit","links","gegen-rechts","sport","krise","bank","islam","christentum","israel","amerika","religion","libanon","gesetz","lesbisch","schwul","trans","umwelt"]`)
+
+                //- <input class="w-full h-16 px-4 mb-2 text-lg text-gray-500 placeholder-gray-300 border rounded-lg focus:shadow-outline" type="text" placeholder="Was wollen Sie erreichen?">
+              </div>
+            </div>
+            
+            <div x-show.transition.in="step === 5">
+              <div class="mb-5">
+                form#my-dropzone.dropzone.fallback(action="/")(class="rounded p-5 border-2 border-dashed border-gray-200 text-gray-500 hover:bg-gray-50" style="display: flex; justify-content: center; flex-direction: column; min-height:350px")                                             
+                  .dz-default.dz-message.needsclick.text-muted.text-center(style="max-width: 85%")
+                    <svg class="mx-auto h-16 w-16 text-gray-400 mb-4" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                      <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="text-sm mb-2"><span class="text-indigo-600 font-bold">Bild hochladen</span> oder hereinziehen</p>
+                    <p class="text-sm">⚠️ Bitte verwenden Sie ein <b>rechteckiges Titelbild</b> in den Formaten <b>*.jpg</b>, <b>*.jpeg</b> oder <b>*.png</b>. Die maximale Größe des Uploads beträgt <b>2 MB</b>.</small>
+              </div>
+            </div>
+          </div>
+      
+          <!-- / Step Content -->
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->	
+      <div class="" x-show="step != 'complete'">
+        <div class="max-w-2xl mx-auto px-4">
+          <div class="flex justify-between">
+            <div class="w-1/2">
+              <button x-show="step > 1" @click="step--" class="btn-prev w-32 focus:outline-none px-5 py-3 rounded-lg text-base font-medium text-center text-gray-600 bg-white hover:bg-gray-100 border">Zurück</button>
+            </div>
+
+            <div class="w-1/2 text-right mb-6">
+              <button x-show="step < 5"@click="step++" class="btn-next w-32 focus:outline-none border border-transparent px-5 py-3 rounded-lg text-center text-white bg-indigo-600 hover:bg-indigo-700 text-base font-medium">Weiter</button>
+              <button @click="step = 'complete'" x-show="step === 5" class=" btn-submit focus:outline-none border border-transparent px-5 py-3 rounded-lg text-center text-white bg-indigo-600 hover:bg-indigo-700 text-base font-medium" >Speichern und Vorschau ansehen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+block scripts
+  <script class="injected-script"></script>
+  <script src="/vendor/dropzone/dropzone.min.js"></script>  
+  <script src="/vendor/quill/quill.min.js"></script>  
+
+  <script src="/main.js"></script>

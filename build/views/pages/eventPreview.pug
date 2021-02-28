@@ -1,0 +1,31 @@
+extends ../layout 
+block content
+  
+  .bg-gray-100
+    .max-w-4xl.mx-auto.py-4.px-4(class='gap-4 items-center sm:flex')
+      p(class="flex-1 mb-3 mt-3") <strong>Fast fertig!</strong> Sehen Sie Ihre Petition in der Vorschau und prüfen Sie, dass alles gut aussieht.
+      <button class="focus:outline-none px-3 py-2 rounded-lg text-sm font-medium text-center text-gray-600 bg-white hover:bg-gray-100 border">Bearbeiten</button>
+      <button class="focus:outline-none border border-transparent px-3 py-2 rounded-lg text-center text-white bg-indigo-600 hover:bg-indigo-700 text-sm font-medium">Online stellen</button>
+
+  .bg-white
+    .max-w-2xl.mx-auto.py-12.px-4(class='flex flex-col items-center')
+      p.text-gray-500 Kategorie
+      h2.profile-username(class='mb-6 mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center') Jäger*innen, bitte verschont unsere Dobby! Polizeibehörden, bitte gebt Dobby nicht zum Abschuss frei!
+      .user-info.flex.gap-3.items-center.text-sm
+        span(class="min-w-min inline-block h-8 w-8 rounded-full overflow-hidden bg-gray-100")
+          svg(class="h-8 w-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24")
+            path(d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z")
+        p.text-gray-800 <strong>Timo Krämer</strong>
+        p.text-gray-500 Deutschland
+
+  .bg-white.mb-12
+    .max-w-2xl.mx-auto
+      p.text-xl.text-gray-800.leading-8 
+        | Wir sind Lena und Bianca. Unsere Hündin Dobby ist vor zwei Monaten (November 2020) entlaufen, weil sie bei einem 
+        <br><br>
+        | Spaziergang von Kindern erschreckt wurde. Seitdem versteckt sie sich verängstigt im Wald.Wir machen uns riesige Sorgen und sind jeden Tag im Wald, um sie zu finden. Die Chancen stehen gut, dass es uns bald gelingt.
+        <br><br>
+        | Doch Jäger*innen drohen, sie zu töten. Jäger*innen wollen unsere Hündin töten! Bitte unterschreiben Sie jetzt und helfen Sie uns, unserer lieben Hündin das Leben zu retten! Einige der örtlichen Jäger*innen haben weder Verständnis noch Geduld. Sie versuchen uns einzuschüchtern, drohen mit Anzeigen und immer wieder damit, Dobby bald zu erschießen. In Baden-Württemberg dürfen Haustiere eigentlich nicht geschossen werden. Nur in seltenen Ausnahmefällen kann die Ortspolizeibehörde den Abschuss wildernder Hunde genehmigen. Zuvor müssen aber alle anderen Möglichkeiten ausgeschöpft worden sein.
+
+block scripts
+  <script src="/main.js"></script>
