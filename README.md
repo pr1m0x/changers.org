@@ -1,7 +1,7 @@
 # changers.org - a change.org CRUD clone
 https://mighty-ridge-70461.herokuapp.com/
 
-👉 Building a CRUD App by using NodeJS, ExpressJS, Typescript, PUG, SASS/Tailwindcss & Webpack.
+👉 Building a CRUD App by using NodeJS, ExpressJS, Typescript, PUG, SASS, Tailwindcss & Webpack.
 
 ❓Don't hesitate and message me for any further questions.
 ## Features
