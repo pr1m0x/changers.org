@@ -6,10 +6,11 @@ https://mighty-ridge-70461.herokuapp.com/
 ❓Don't hesitate and message me for any further questions.
 
 
-## What you can do
+## Introduction
+It's a basic CRUD app with the following functionalities:
 
 | URL   |      Action      | 
-|----------|:-------------:|
+|----------|-------------|
 | /signup | Creating a new User |
 | /login | Login a new User   |
 | /logout | Logout a user |
