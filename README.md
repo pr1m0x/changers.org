@@ -5,16 +5,18 @@ https://mighty-ridge-70461.herokuapp.com/
 
 ❓Don't hesitate and message me for any further questions.
 
+
 ## What you can do
-- Creating a new User @ "/signup"
-- Login a new User @ "/login"
-- Logout a user @ "/logout"
-- Update user credentials @ "/profile"
-- Create a new petition @ "/start"
-- See your created petitions @ "/me"  
-- Update your created petitions @ "/edit/:id/event"  
-- Delete petition  
-- Search for petitions @ "/search"
+
+| URL   |      Action      | 
+|----------|:-------------:|
+| /signup | Creating a new User |
+| /login | Login a new User   |
+| /logout | Logout a user |
+| /profile | Update user credentials |
+| /start| Create a new petition |
+| /edit/:id/event | Update a petition |
+| /search| Search for petitions |
 ## What you can see
 - New petitions @ "/" below the banner
 ## What you can not do
