@@ -1,5 +1,9 @@
-# change.org clone - Server Sided CRUD App
-visit here: https://mighty-ridge-70461.herokuapp.com/
+# changers.org - a change.org CRUD clone
+https://mighty-ridge-70461.herokuapp.com/
+
+👉 Building a CRUD App by using NodeJS, ExpressJS, Typescript, PUG, Tailwindcss.
+
+❓Don't hesitate and message me for any further questions.
 ## Features
 ### Validation
 - Validations for Login/Signup/Form pages
