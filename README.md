@@ -1,6 +1,5 @@
-# [change.org clone - Server Sided CRUD App](https://mighty-ridge-70461.herokuapp.com/)
-- Base app structure to build new projects on
-
+# change.org clone - Server Sided CRUD App
+visit here: https://mighty-ridge-70461.herokuapp.com/
 ## Features
 ### Validation
 - Validations for Login/Signup/Form pages
@@ -39,6 +38,13 @@
 ### Image upload via cloudinary
 - Images are stored in cloudinary cloud
 
+## 🪲 Known Bugs & todos
+### Images
+- No default image is created when user created petition without a banner
+- Images are not cropped into right format
+
+### Design
+- Not fully responsive
 
 
 
