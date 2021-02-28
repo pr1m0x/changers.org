@@ -20,32 +20,11 @@ https://mighty-ridge-70461.herokuapp.com/
 ### Rich Text Editor
 - Create your petition description and style it
 
-### Responsive
-- Web responsiveness
-
-## More Facts
-### Main Technologies
-- Typescript
-- PUG Engine
-- SASS
-- Tailwindcss
-- Webpack
-- JWT Token Auth
-
-### Models
-- 2 Models
-- User & Petition
-
-### CRUD
-- Full CRUD Operations for Petition Model
-
-### Image upload via cloudinary
-- Images are stored in cloudinary cloud
 
 ## 🐞 Known Bugs & Todos
 ### Images
-- No default image is created when user created petition without a banner
-- Images are not cropped into right format
+- No default/placeholder image is added to petition if no banner is uploaded
+- Images are not cropped & sclaed down into right format
 
 ### Design
 - Not fully responsive
