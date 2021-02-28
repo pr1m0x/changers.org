@@ -18,12 +18,12 @@ It's a basic CRUD app with the following functionalities:
 | /start| Create a new petition |
 | /edit/:id/event | Update a petition |
 | /search| Search for petitions |
-## What you can see
-- New petitions @ "/" below the banner
-## What you can not do
-- Add a profile image for user
-- Click on the tags @ "/" and search for those topics
-- Signup to a petition
+
+## Whats not implemented
+- Upload a avatar for user
+- Using the tag-buttons 
+- Signup for a petition
+- Like functionalities
 
 
 ## Features
