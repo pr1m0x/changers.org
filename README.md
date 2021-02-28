@@ -42,7 +42,7 @@ https://mighty-ridge-70461.herokuapp.com/
 ### Image upload via cloudinary
 - Images are stored in cloudinary cloud
 
-## 🪲 Known Bugs & Todos
+## 🐞 Known Bugs & Todos
 ### Images
 - No default image is created when user created petition without a banner
 - Images are not cropped into right format
