@@ -6,6 +6,11 @@ https://mighty-ridge-70461.herokuapp.com/
 ❓Don't hesitate and message me for any further questions.
 
 
+## 🏁 Project Goals
+### Rebuild and update change.org CI
+- Taking the change.org and redesign the CI
+- Building Login/Signup functionalities
+
 ## Introduction
 It's a basic CRUD app with the following functionalities:
 
@@ -25,13 +30,13 @@ It's a basic CRUD app with the following functionalities:
 - Signup for a petition
 - Like functionalities
 
-
 ## Some Features
 - Validations for Login/Signup/Form pages
 - Multistep Form to create petitions
 - Search for petition names on page /search
 - Upload petition banner image via dragn' drop
 - Create your petition description and style it
+
 ## 🐞 Known Bugs & Todos
 ### Images
 - No default/placeholder image is added to petition if no banner is uploaded
