@@ -1,15 +1,16 @@
 # changers.org - a change.org CRUD clone
 https://mighty-ridge-70461.herokuapp.com/
 
-👉 Building a CRUD App by using NodeJS, ExpressJS, Typescript, PUG, SASS, Tailwindcss & Webpack.
+👉 Building a CRUD Webapp by using NodeJS, ExpressJS, Typescript, PUG, SASS, Tailwindcss & Webpack.
 
 ❓Don't hesitate and message me for any further questions.
 
 
 ## 🏁 Project Goals
 ### Rebuild and update change.org CI
-- Taking the change.org and redesign the CI
+- Taking change.org design and add little tweaks to the CI
 - Building Login/Signup functionalities
+
 
 ## Introduction
 It's a basic CRUD app with the following functionalities:
@@ -24,6 +25,7 @@ It's a basic CRUD app with the following functionalities:
 | /edit/:id/event | Update a petition |
 | /search| Search for petitions |
 
+
 ## Whats not implemented
 - Upload a avatar for user
 - Using the tag-buttons 
@@ -36,6 +38,7 @@ It's a basic CRUD app with the following functionalities:
 - Search for petition names on page /search
 - Upload petition banner image via dragn' drop
 - Create your petition description and style it
+
 
 ## 🐞 Known Bugs & Todos
 ### Images
