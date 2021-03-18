@@ -42,8 +42,9 @@ It's a basic CRUD app with the following functionalities:
 
 ## 🐞 Known Bugs & Todos
 ### Images
-- No default/placeholder image is added to petition if no banner is uploaded
+- No default/placeholder image is added
 - Images are not cropped & sclaed down into right format
+- Add fe/be validation & validation/error msgs
 
 ### Design
 - Not fully responsive
